@@ -2,6 +2,8 @@
 
 **A high-performance C++ calculus and mathematics engine for Python, built with pybind11.**
 
+see [releases](https://github.com/LegedsDaD/CalCulus/release) to get information about version
+
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![PyPI Downloads](https://img.shields.io/pypi/dm/calculus?style=flat-square)
 ![Wheel](https://img.shields.io/pypi/wheel/calculus?style=flat-square)
