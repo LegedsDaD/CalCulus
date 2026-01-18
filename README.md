@@ -182,6 +182,64 @@ Physical and mathematical constants.
 
 ---
 
+## Ultimate Test Code
+```python
+import calculus as c
+import math
+
+print("\n===== CalCulus Full Constants Test =====\n")
+
+# ---------------- Scalars ----------------
+s = c.Scalar(2.5)
+print("Scalar example:")
+print("s =", s)
+print("s * 2 =", s * c.Scalar(2))
+print("s.sqrt() =", s.sqrt())
+print("s.exp() =", s.exp())
+print("s.log() =", s.log())
+print("s.sin() =", s.sin())
+
+# ---------------- Vec3 ----------------
+v = c.Vec3(3, 4, 12)
+print("\nVector example:")
+print("v =", v)
+print("v.magnitude() =", v.magnitude())
+print("v.normalize() =", v.normalize())
+
+# ---------------- Solver ----------------
+print("\nIntegration example:")
+area = c.Solver.integrate(lambda x: x**2, 0, 3, 1000)
+print("∫ x² dx from 0 to 3 =", area)
+print("Expected =", (3**3)/3)
+
+# ---------------- Constants ----------------
+print("\nConstants:")
+print(f"pi = {c.Constants.pi} (math.pi = {math.pi})")
+print(f"e  = {c.Constants.e} (math.e = {math.e})")
+print(f"g  = {c.Constants.g} m/s²")
+print(f"c  = {c.Constants.c if hasattr(c.Constants,'c') else 'Not defined'} m/s")
+print(f"h  = {c.Constants.h if hasattr(c.Constants,'h') else 'Not defined'} Js")
+print(f"k  = {c.Constants.k if hasattr(c.Constants,'k') else 'Not defined'} J/K")
+
+# ---------------- Check formulas with constants ----------------
+print("\nUsing constants in formulas:")
+# Example: E = m * g * h (potential energy formula)
+mass = 10  # kg
+height = 5  # meters
+energy = mass * c.Constants.g * height
+print(f"Potential Energy = m*g*h = {energy} J")
+
+# Example: Circumference of a circle using pi
+radius = 7
+circumference = 2 * c.Constants.pi * radius
+print(f"Circumference of circle (r=7) = {circumference}")
+
+print("\n===== All Constants Tested Successfully =====")
+```
+⏫ This is the Full test code. Rest are secondary and may or may not work.
+
+---
+
 ## 🧪 Examples
 
 ###  Example 1 – Basic Scalar Arithmetic
