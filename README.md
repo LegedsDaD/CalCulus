@@ -85,7 +85,6 @@ CalCulus_CPP/
 │
 ├── calculus/
 │   ├── __init__.py
-│   ├── _core.py
 │
 ├── calculus_core.cpp
 ├── pyproject.toml
